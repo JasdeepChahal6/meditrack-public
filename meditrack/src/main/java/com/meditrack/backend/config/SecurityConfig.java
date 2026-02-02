@@ -61,10 +61,10 @@ public class SecurityConfig {
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
         
-        // Read allowed origins from environment variable, fallback to localhost for development
+        // Read allowed origins from environment variable, fallback to placeholder for public repo
         String corsOrigins = System.getenv("CORS_ORIGINS");
         if (corsOrigins == null || corsOrigins.isEmpty()) {
-            corsOrigins = "http://localhost:5173"; // Default for local development
+            corsOrigins = "https://example.com"; // Placeholder default
         }
         // Support multiple origins separated by comma
         configuration.setAllowedOrigins(Arrays.asList(corsOrigins.split(",")));

@@ -19,7 +19,7 @@ public class EmailService {
     @Value("${resend.from.email:onboarding@resend.dev}")
     private String fromEmail;
 
-    @Value("${app.frontend.url:http://localhost:5173}")
+    @Value("${app.frontend.url:https://example.com}")
     private String frontendUrl;
 
     public EmailService(@Value("${resend.api.key}") String apiKey) {

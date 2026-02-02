@@ -16,9 +16,9 @@ public class OpenFdaDrugService {
     // Search for drugs by name using OpenFDA API
     public List<DrugResult> searchDrug(String name) {
         try {
-            // Construct the API URL - search both generic name and brand name
-            String url = "https://api.fda.gov/drug/label.json?search=openfda.generic_name:\""
-                        + name + "\"+openfda.brand_name:\"" + name + "\"&limit=5";
+            // Construct the API URL - placeholder endpoint for public repo
+            String url = "https://api.example.com/drug/label?search=generic_name:"
+                        + name + "+brand_name:" + name + "&limit=5";
             // Make the API request and map the response
             OpenFdaLabelResponse response = restTemplate.getForObject(url, OpenFdaLabelResponse.class);
 
