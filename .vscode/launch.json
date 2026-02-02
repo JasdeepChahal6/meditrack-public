@@ -1,0 +1,27 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "MeditrackApplication (Production)",
+      "request": "launch",
+      "mainClass": "com.meditrack.backend.MeditrackApplication",
+      "projectName": "meditrack",
+      "cwd": "${workspaceFolder}/meditrack",
+      "envFile": "${workspaceFolder}/meditrack/.env",
+      "console": "integratedTerminal"
+    },
+    {
+      "type": "java",
+      "name": "MeditrackApplication (Dev)",
+      "request": "launch",
+      "mainClass": "com.meditrack.backend.MeditrackApplication",
+      "projectName": "meditrack",
+      "cwd": "${workspaceFolder}/meditrack",
+      "env": {
+        "SPRING_PROFILES_ACTIVE": "dev"
+      },
+      "console": "integratedTerminal"
+    }
+  ]
+}
